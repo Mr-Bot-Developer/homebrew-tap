@@ -5,25 +5,21 @@
 class Docuowl < Formula
   desc "A documentation generator"
   homepage "https://github.com/docuowl/docuowl"
-  version "0.2.3"
+  version "0.2.4"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/docuowl/docuowl/releases/download/v0.2.3/docuowl_0.2.3_Darwin_x86_64.tar.gz"
-    sha256 "0573dab6960fd7d5ea91008e3a0864b890aa3a785b62d74968cd9203c312b561"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/docuowl/docuowl/releases/download/v0.2.3/docuowl_0.2.3_Darwin_arm64.tar.gz"
-    sha256 "b05d1d7b22054fe7f134231d83e787c16c9b65ec7a7471b241d9421771eabf42"
+    url "https://github.com/docuowl/docuowl/releases/download/v0.2.4/docuowl_0.2.4_Darwin_x86_64.tar.gz"
+    sha256 "0f145c81e7873a9f68e68afb12e2077c63f056b7cbf01806b41e47cc0ad98a9c"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/docuowl/docuowl/releases/download/v0.2.3/docuowl_0.2.3_Linux_x86_64.tar.gz"
-    sha256 "604d581a982e7cbf0e4a0ff90c9127f8399d28da3c8db8a5a5f07023d382cf38"
+    url "https://github.com/docuowl/docuowl/releases/download/v0.2.4/docuowl_0.2.4_Linux_x86_64.tar.gz"
+    sha256 "ef75ddaaffe31ed07e632fdf316008c05bea882cc9437936946bdbe03bad51f5"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/docuowl/docuowl/releases/download/v0.2.3/docuowl_0.2.3_Linux_arm64.tar.gz"
-    sha256 "83ba9888bfd6c92a7829970b1f99b73b4dbdb99f6f2cd7fbdb543c8a7d4a4fac"
+    url "https://github.com/docuowl/docuowl/releases/download/v0.2.4/docuowl_0.2.4_Linux_arm64.tar.gz"
+    sha256 "1b5186778b4f6c6a8121303432effec6597cdd52e1f187e49858baa688155fb2"
   end
 
   conflicts_with "docuowl"
