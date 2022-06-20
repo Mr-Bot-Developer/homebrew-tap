@@ -7,7 +7,6 @@ class Docuowl < Formula
   homepage "https://github.com/docuowl/docuowl"
   version "0.2.4"
   license "MIT"
-  bottle :unneeded
   url "https://github.com/docuowl/docuowl/releases/download/v0.2.4/docuowl_0.2.4_Linux_x86_64.tar.gz"
   sha256 "ef75ddaaffe31ed07e632fdf316008c05bea882cc9437936946bdbe03bad51f5"
 
