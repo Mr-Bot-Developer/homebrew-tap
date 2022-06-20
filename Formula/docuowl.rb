@@ -7,8 +7,21 @@ class Docuowl < Formula
   homepage "https://github.com/docuowl/docuowl"
   version "0.2.4"
   license "MIT"
-  url "https://github.com/docuowl/docuowl/releases/download/v0.2.4/docuowl_0.2.4_Linux_x86_64.tar.gz"
-  sha256 "ef75ddaaffe31ed07e632fdf316008c05bea882cc9437936946bdbe03bad51f5"
+
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/docuowl/docuowl/releases/download/v0.2.4/docuowl_0.2.4_Darwin_x86_64.tar.gz"
+    sha256 "0f145c81e7873a9f68e68afb12e2077c63f056b7cbf01806b41e47cc0ad98a9c"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/docuowl/docuowl/releases/download/v0.2.4/docuowl_0.2.4_Linux_x86_64.tar.gz"
+    sha256 "ef75ddaaffe31ed07e632fdf316008c05bea882cc9437936946bdbe03bad51f5"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/docuowl/docuowl/releases/download/v0.2.4/docuowl_0.2.4_Linux_arm64.tar.gz"
+    sha256 "1b5186778b4f6c6a8121303432effec6597cdd52e1f187e49858baa688155fb2"
+  end
+
+  conflicts_with "docuowl"
 
   def install
     bin.install "docuowl"
