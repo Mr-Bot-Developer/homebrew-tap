@@ -22,6 +22,8 @@ class Docuowl < Formula
     sha256 "1b5186778b4f6c6a8121303432effec6597cdd52e1f187e49858baa688155fb2"
   end
 
+  depends_on "openjdk"
+
   conflicts_with "docuowl"
 
   def install
